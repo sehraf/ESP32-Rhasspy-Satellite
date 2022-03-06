@@ -401,7 +401,7 @@ const std::map<const std::string, Conv> config_values = {
         }
     },
     {"uptime", {
-            []() -> String { return String((unsigned long)(esp_timer_get_time() / 1000)); },
+            []() -> String { return String((unsigned long)(esp_timer_get_time() / 1000000)); },
             [](AsyncWebParameter *p) { return false; },
             []() {} 
         }
