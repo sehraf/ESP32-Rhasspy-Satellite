@@ -127,6 +127,18 @@ input::-moz-focus-inner,input::-moz-focus-outer {border: 0;}
         <span class="range-slider__value">0</span>
       </div>
     </div>
+    <div class="input-container">
+      <label>heap:&nbsp;</label>
+      <label>%HEAP%</label>
+    </div>
+    <div class="input-container">
+      <label>uptime:&nbsp;</label>
+      <label>%UPTIME%</label>
+    </div>
+    <div class="input-container">
+      <label>rssi:&nbsp;</label>
+      <label>%RSSI%</label>
+    </div>
     <button type="submit" class="btn">Save</button>
   </form>
 </body>

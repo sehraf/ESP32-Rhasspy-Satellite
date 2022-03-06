@@ -394,6 +394,24 @@ const std::map<const std::string, Conv> config_values = {
             []() {} 
         }
     },
+    {"heap", {
+            []() -> String { return String(ESP.getFreeHeap()); },
+            [](AsyncWebParameter *p) { return false; },
+            []() {} 
+        }
+    },
+    {"uptime", {
+            []() -> String { return String((unsigned long)(esp_timer_get_time() / 1000)); },
+            [](AsyncWebParameter *p) { return false; },
+            []() {} 
+        }
+    },
+    {"rssi", {
+            []() -> String { return String(WiFi.RSSI()); },
+            [](AsyncWebParameter *p) { return false; },
+            []() {} 
+        }
+    },
 };
 
 // this function supplies template variables to the template engine
